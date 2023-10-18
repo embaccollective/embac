@@ -1,24 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matanza Website</title>
 <style>
   body {
+    font-family: "Helvetica Bold", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
   }
-  
-  img {
+
+  header {
+    text-align: center;
+    background-image: url('embac.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    padding: 5vh 0; /* Reduced top and bottom padding */
+    min-height: 100px; /* Ensure the header always has a minimum height */
+    overflow: hidden; /* Hide any overflowing content */
+  }
+
+  /* Make the background image responsive */
+  @media (max-width: 768px) {
+    header {
+      background-size: contain;
+    }
+  }
+
+  .textbox {
+    text-align: center;
+    padding: 10px;
+    font-size: 2em;
+    margin-top: 10px; /* Reduced space between header and textbox */
+  }
+
+  .label {
+    text-align: center;
+    padding: 5px;
+    font-size: 2em;
+  }
+
+  .image-container {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .image-container img {
     max-width: 100%;
     height: auto;
+  }
+
+  .button-container {
+    text-align: center;
+    padding: 10px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+  }
+
+  button:active {
+    background-color: white;
+    color: #000000;
+  }
+
+  /* Media queries for responsive design */
+
+  @media (min-width: 768px) {
+    .textbox,
+    .label {
+      font-size: 3em;
+    }
+
+    button {
+      font-size: 2em;
+    }
   }
 </style>
 </head>
 <body>
-  <img src="embac.png" alt="Centered Image">
+  <header>
+    <!-- Add some content to the header to ensure it's visible -->
+    <h1>.</h1>
+  </header>
+  <div class="textbox">
+    <p>MATANZA</p>
+  </div>
+  <div class="image-container">
+    <img src="Matanza.jpg" alt="Matanza">
+  </div>
+  <div class="label">
+    <p>$ 28.000</p>
+  </div>
+  <div class="button-container">
+    <a href="form-page.html"><button>COMPRAR</button></a>
+  </div>
 </body>
 </html>
